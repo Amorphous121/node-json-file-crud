@@ -5,10 +5,10 @@ exports.readFile = async (filePath) => {
   return JSON.parse(userFileContent);
 };
 
-exports.writeToFile = (filePath, userData) => {
+exports.writeToFile = (filePath, contentToWrite) => {
   return fs.writeFile(
     filePath,
-    JSON.stringify(userData),
+    JSON.stringify(contentToWrite),
     "utf-8"
   );
 };

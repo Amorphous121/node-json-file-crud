@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const TodoController = require('../controllers/todo.controller');
 
-const todoRouter = Router();
+const todoRouter = Router({ mergeParams: true });
 
 // Fetch Todos by userId
 todoRouter.get('/', TodoController.fetchAllTodos);
@@ -18,4 +18,5 @@ todoRouter.put('/:todoId', TodoController.updateTodoById);
 // Delete Todo:
 todoRouter.delete('/:todoId', TodoController.deleteTodoById);
 
+// Export Todo router
 module.exports = todoRouter;

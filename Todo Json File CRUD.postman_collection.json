@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "420f5e69-20af-4f98-89a3-a23d6fd5b9cb",
+		"name": "Todo Json File CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Roshan\",\r\n    \"lastName\": \"Patil\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/926dded6-439e-4d5f-91aa-8868f60c18b5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"926dded6-439e-4d5f-91aa-8868f60c18b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Rajesh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/926dded6-439e-4d5f-91aa-8868f60c18b5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"926dded6-439e-4d5f-91aa-8868f60c18b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/926dded6-439e-4d5f-91aa-8868f60c18b5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"926dded6-439e-4d5f-91aa-8868f60c18b5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "Create Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoText\": \"Create an demo with nest js\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f/todos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f/todos?searchText=nest",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": "nest"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Todo By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f/todos/3fddb2df-98d3-4f97-aba4-0ac33f5cb573",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f",
+								"todos",
+								"3fddb2df-98d3-4f97-aba4-0ac33f5cb573"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/users/aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f/todos/7032d3f9-e492-4cac-9818-2eb7cd7db53c",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f",
+								"todos",
+								"7032d3f9-e492-4cac-9818-2eb7cd7db53c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoStatus\": \"completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/users/aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f/todos/3fddb2df-98d3-4f97-aba4-0ac33f5cb573",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"users",
+								"aff0b0b7-f98c-49e3-89c9-cf29e07d2f2f",
+								"todos",
+								"3fddb2df-98d3-4f97-aba4-0ac33f5cb573"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "default"
+		}
+	]
+}
